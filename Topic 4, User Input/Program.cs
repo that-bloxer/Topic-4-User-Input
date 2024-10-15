@@ -1,8 +1,13 @@
 ﻿int age;
 double price;
 Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("Press ENTER to continue.");
+Console.ReadLine();
 Console.WriteLine("Enter Your Age: ");
 Console.WriteLine(Int32.TryParse(Console.ReadLine(), out age));
 Console.WriteLine("Your age is " + age);
 Console.ReadLine();
 Console.WriteLine("What is the price?");
+Double.TryParse(Console.ReadLine(), out price);
+Console.WriteLine("The price is " + price.ToString("C"));
+Console.WriteLine("With a 50% discount, the price is " + price.ToString("C"));
