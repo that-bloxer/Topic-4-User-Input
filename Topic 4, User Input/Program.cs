@@ -1,5 +1,7 @@
 ﻿int age;
 double price;
+double pricediscount;
+double pricediscount2;
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("Press ENTER to continue.");
 Console.ReadLine();
@@ -9,5 +11,8 @@ Console.WriteLine("Your age is " + age);
 Console.ReadLine();
 Console.WriteLine("What is the price?");
 Double.TryParse(Console.ReadLine(), out price);
+pricediscount = price * 0.50;
+pricediscount2 = price * 0.80;
 Console.WriteLine("The price is " + price.ToString("C"));
-Console.WriteLine("With a 50% discount, the price is " + price.ToString("C"));
+Console.WriteLine("With a 50% discount, the price is " + pricediscount.ToString("C"));
+Console.WriteLine("With a 20% discount, the price is " + pricediscount2.ToString("C"));
